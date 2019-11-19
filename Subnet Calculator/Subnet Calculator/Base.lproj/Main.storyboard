@@ -21,10 +21,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxx.xxx.xxx.xxx" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-td-uwv">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxx.xxx.xxx.xxx" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-td-uwv">
                                 <rect key="frame" x="20" y="77" width="399" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrq-Ar-bNP">
                                 <rect key="frame" x="20" y="61" width="59" height="14"/>
@@ -47,12 +47,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="255.255.255.0" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DmO-J1-O1k">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="255.255.255.0" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DmO-J1-O1k">
                                         <rect key="frame" x="0.0" y="18" width="182" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="32" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aOM-AG-6r5">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="32" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aOM-AG-6r5">
                                         <rect key="frame" x="217" y="18" width="182" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -245,6 +245,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="broadcastAddrLabel" destination="atj-ry-kLF" id="Yi5-z2-tqf"/>
+                        <outlet property="endingHostLabel" destination="hmu-gx-FrE" id="NEA-Kl-FHf"/>
+                        <outlet property="ipAddressField" destination="RDh-td-uwv" id="Tiy-CE-Dca"/>
+                        <outlet property="maskField" destination="DmO-J1-O1k" id="Fqc-IE-xPp"/>
+                        <outlet property="maxHostsLabel" destination="KX3-Rn-m7Y" id="4bz-ny-aXf"/>
+                        <outlet property="networkAddrLabel" destination="v7T-9U-ALE" id="4Nt-dx-u2w"/>
+                        <outlet property="networkClassLabel" destination="5Qh-TX-X4i" id="Aow-Um-pUh"/>
+                        <outlet property="prefixField" destination="aOM-AG-6r5" id="fF6-2l-Jp5"/>
+                        <outlet property="startingHostLabel" destination="lsX-Gp-3Dj" id="vif-0v-usf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
