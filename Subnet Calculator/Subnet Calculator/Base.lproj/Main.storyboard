@@ -16,16 +16,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subnet Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rSV-9n-1K9">
-                                <rect key="frame" x="20" y="20" width="760" height="33"/>
+                                <rect key="frame" x="20" y="50" width="760" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tve-2L-WHD">
-                                <rect key="frame" x="180" y="57" width="440" height="370"/>
+                                <rect key="frame" x="180" y="87" width="440" height="370"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xN6-Of-xYU">
-                                        <rect key="frame" x="20" y="208" width="400" height="66"/>
+                                        <rect key="frame" x="20" y="228" width="400" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Host" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fqz-Cc-MPE">
                                                 <rect key="frame" x="8" y="8" width="73" height="14"/>
@@ -83,25 +83,31 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5PX-Na-DVs">
-                                        <rect key="frame" x="20" y="138" width="399" height="31"/>
+                                        <rect key="frame" x="20" y="158" width="399" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="aXr-qP-ze4"/>
                                         </constraints>
                                         <state key="normal" title="Calculate"/>
+                                        <connections>
+                                            <action selector="calculateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L3C-gX-7bx"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Results" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-JD-Lcr">
-                                        <rect key="frame" x="20" y="177" width="399" height="23"/>
+                                        <rect key="frame" x="20" y="197" width="399" height="23"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="xxx.xxx.xxx.xxx" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="RDh-td-uwv">
-                                        <rect key="frame" x="288" y="18" width="131" height="34"/>
+                                        <rect key="frame" x="20" y="38" width="399" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                        <connections>
+                                            <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="4tT-hK-TuB"/>
+                                        </connections>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJc-NK-qjM">
-                                        <rect key="frame" x="20" y="282" width="400" height="66"/>
+                                        <rect key="frame" x="20" y="302" width="400" height="66"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VTo-Hi-QXa">
                                                 <rect key="frame" x="8" y="8" width="94" height="14"/>
@@ -159,7 +165,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LxU-Jg-1hO">
-                                        <rect key="frame" x="20" y="60" width="399" height="70"/>
+                                        <rect key="frame" x="20" y="80" width="399" height="70"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subnet Mask" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbO-C1-JiC">
                                                 <rect key="frame" x="0.0" y="0.0" width="71" height="14"/>
@@ -177,11 +183,17 @@
                                                 <rect key="frame" x="0.0" y="18" width="182" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="coD-Dh-yQI"/>
+                                                </connections>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="32" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aOM-AG-6r5">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="24" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aOM-AG-6r5">
                                                 <rect key="frame" x="217" y="18" width="182" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="textFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="rKi-Ae-QsU"/>
+                                                </connections>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prefix" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qub-tJ-9l6">
                                                 <rect key="frame" x="367" y="0.0" width="32" height="14"/>
@@ -208,7 +220,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IP Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrq-Ar-bNP">
-                                        <rect key="frame" x="20" y="0.0" width="59" height="14"/>
+                                        <rect key="frame" x="20" y="20" width="59" height="14"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -218,7 +230,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="1W9-20-MsC"/>
                                     <constraint firstAttribute="trailing" secondItem="tyt-JD-Lcr" secondAttribute="trailing" constant="21" id="2NI-Gr-j3a"/>
-                                    <constraint firstItem="Hrq-Ar-bNP" firstAttribute="top" secondItem="Tve-2L-WHD" secondAttribute="top" id="3dO-LF-Y9h"/>
+                                    <constraint firstItem="Hrq-Ar-bNP" firstAttribute="top" secondItem="Tve-2L-WHD" secondAttribute="top" constant="20" id="3dO-LF-Y9h"/>
                                     <constraint firstItem="5PX-Na-DVs" firstAttribute="top" secondItem="LxU-Jg-1hO" secondAttribute="bottom" constant="8" id="4EN-mt-Do1"/>
                                     <constraint firstItem="LxU-Jg-1hO" firstAttribute="top" secondItem="RDh-td-uwv" secondAttribute="bottom" constant="8" id="71N-uo-dO2"/>
                                     <constraint firstItem="xN6-Of-xYU" firstAttribute="leading" secondItem="Tve-2L-WHD" secondAttribute="leading" constant="20" id="9ES-l2-Lsf"/>
@@ -229,6 +241,7 @@
                                     <constraint firstAttribute="trailing" secondItem="5PX-Na-DVs" secondAttribute="trailing" constant="21" id="UvL-df-qqn"/>
                                     <constraint firstAttribute="width" constant="440" id="Wpz-9w-UK9"/>
                                     <constraint firstItem="Hrq-Ar-bNP" firstAttribute="leading" secondItem="Tve-2L-WHD" secondAttribute="leading" constant="20" id="b47-ad-h2F"/>
+                                    <constraint firstItem="RDh-td-uwv" firstAttribute="leading" secondItem="Tve-2L-WHD" secondAttribute="leading" constant="20" id="cPu-DW-EBG"/>
                                     <constraint firstItem="LxU-Jg-1hO" firstAttribute="leading" secondItem="Tve-2L-WHD" secondAttribute="leading" constant="20" id="cfe-U0-VsX"/>
                                     <constraint firstAttribute="trailing" secondItem="RDh-td-uwv" secondAttribute="trailing" constant="21" id="eMu-fn-vqQ"/>
                                     <constraint firstItem="tyt-JD-Lcr" firstAttribute="top" secondItem="5PX-Na-DVs" secondAttribute="bottom" constant="8" id="etE-bM-j1U"/>
@@ -239,10 +252,21 @@
                                     <constraint firstItem="sJc-NK-qjM" firstAttribute="top" secondItem="xN6-Of-xYU" secondAttribute="bottom" constant="8" id="sED-dp-GPX"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error Label Here" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCx-pK-kfX">
+                                <rect key="frame" x="180" y="465" width="440" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="440" id="3L7-Q6-nrL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rSV-9n-1K9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="XpV-qa-HJ5"/>
+                            <constraint firstItem="eCx-pK-kfX" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="9JH-VS-uyD"/>
+                            <constraint firstItem="rSV-9n-1K9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="XpV-qa-HJ5"/>
+                            <constraint firstItem="eCx-pK-kfX" firstAttribute="top" secondItem="Tve-2L-WHD" secondAttribute="bottom" constant="8" id="e8m-VV-vla"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rSV-9n-1K9" secondAttribute="trailing" constant="20" id="fWl-mJ-lMa"/>
                             <constraint firstItem="Tve-2L-WHD" firstAttribute="top" secondItem="rSV-9n-1K9" secondAttribute="bottom" constant="4" id="qgh-9N-5cw"/>
                             <constraint firstItem="Tve-2L-WHD" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yNh-iI-MLL"/>
@@ -253,6 +277,7 @@
                     <connections>
                         <outlet property="broadcastAddrLabel" destination="atj-ry-kLF" id="Yi5-z2-tqf"/>
                         <outlet property="endingHostLabel" destination="hmu-gx-FrE" id="NEA-Kl-FHf"/>
+                        <outlet property="errorLabel" destination="eCx-pK-kfX" id="ZsQ-bG-14h"/>
                         <outlet property="ipAddressField" destination="RDh-td-uwv" id="Tiy-CE-Dca"/>
                         <outlet property="maskField" destination="DmO-J1-O1k" id="Fqc-IE-xPp"/>
                         <outlet property="maxHostsLabel" destination="KX3-Rn-m7Y" id="4bz-ny-aXf"/>

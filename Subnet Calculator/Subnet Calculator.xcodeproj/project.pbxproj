@@ -14,6 +14,9 @@
 		E491196F2384901B007146D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E491196E2384901B007146D8 /* Assets.xcassets */; };
 		E49119722384901B007146D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E49119702384901B007146D8 /* LaunchScreen.storyboard */; };
 		E491197D2384901B007146D8 /* Subnet_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491197C2384901B007146D8 /* Subnet_CalculatorTests.swift */; };
+		E491198A23854749007146D8 /* IPSubnetCalculationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491198923854749007146D8 /* IPSubnetCalculationModel.swift */; };
+		E491198C23854782007146D8 /* SubnetConversionHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491198B23854782007146D8 /* SubnetConversionHelper.swift */; };
+		E491198E23855F1D007146D8 /* MaskAddressValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E491198D23855F1D007146D8 /* MaskAddressValidation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		E491197C2384901B007146D8 /* Subnet_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subnet_CalculatorTests.swift; sourceTree = "<group>"; };
 		E491197E2384901B007146D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E491198723849022007146D8 /* Subnet Calculator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Subnet Calculator.entitlements"; sourceTree = "<group>"; };
+		E491198923854749007146D8 /* IPSubnetCalculationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPSubnetCalculationModel.swift; sourceTree = "<group>"; };
+		E491198B23854782007146D8 /* SubnetConversionHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubnetConversionHelper.swift; sourceTree = "<group>"; };
+		E491198D23855F1D007146D8 /* MaskAddressValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskAddressValidation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,7 @@
 		E491196423849018007146D8 /* Subnet Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				E4911988238546F6007146D8 /* Models */,
 				E491198723849022007146D8 /* Subnet Calculator.entitlements */,
 				E491196523849018007146D8 /* AppDelegate.swift */,
 				E491196723849018007146D8 /* SceneDelegate.swift */,
@@ -99,6 +106,16 @@
 				E491197E2384901B007146D8 /* Info.plist */,
 			);
 			path = "Subnet CalculatorTests";
+			sourceTree = "<group>";
+		};
+		E4911988238546F6007146D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E491198923854749007146D8 /* IPSubnetCalculationModel.swift */,
+				E491198B23854782007146D8 /* SubnetConversionHelper.swift */,
+				E491198D23855F1D007146D8 /* MaskAddressValidation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +220,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E491196A23849018007146D8 /* ViewController.swift in Sources */,
+				E491198E23855F1D007146D8 /* MaskAddressValidation.swift in Sources */,
 				E491196623849018007146D8 /* AppDelegate.swift in Sources */,
+				E491198C23854782007146D8 /* SubnetConversionHelper.swift in Sources */,
 				E491196823849018007146D8 /* SceneDelegate.swift in Sources */,
+				E491198A23854749007146D8 /* IPSubnetCalculationModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
